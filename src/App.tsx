@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Header } from "./pages/Header";
+import { LanguageProvider } from "./context/LanguageContext";
+import { Description } from "./components/description/Description";
+
+import Mitad2 from "./images/mitad-2.png";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LanguageProvider>
+        <Header />
+        <div className="image1"></div>
+
+        <main>
+          <Description />
+        </main>
+        <div className="image2"></div>
+      </LanguageProvider>
     </div>
   );
 }
