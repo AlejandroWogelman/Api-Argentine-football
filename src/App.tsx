@@ -3,13 +3,12 @@ import { Header } from "./pages/Header";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Description } from "./components/description/Description";
 
-import Mitad2 from "./images/mitad-2.png";
-
 function App() {
   return (
     <div className="App">
       <LanguageProvider>
         <Header />
+
         <div className="image1"></div>
 
         <main>

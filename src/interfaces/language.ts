@@ -6,6 +6,7 @@ export interface contextLanguages {
 export interface languages {
   es: languagesTexts;
   en: languagesTexts;
+  pr: languagesTexts;
 }
 
 interface languagesTexts {

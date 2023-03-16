@@ -7,7 +7,8 @@ export interface provider {
 
 export const LanguageContext = createContext<contextLanguages | null>(null);
 
-const initialLanguage: string = "es";
+let initialLanguage = localStorage.getItem("language") || "es";
+
 const translations: languages = {
   es: {
     headerTitle: "API del fútbol ARGENTINO",
@@ -37,6 +38,20 @@ const translations: languages = {
       ],
     ],
   },
+  pr: {
+    headerTitle: "API de futebol ARGENTINO",
+    description: [
+      [
+        "Lista de times",
+        "Você poderá consultar através de um GET todos os times que compõem a Primeira Divisão do Futebol Argentino.",
+      ],
+      [
+        "Informações da Equipe",
+        "Você poderá consultar através de um GET a equipe e os dados da equipe.",
+      ],
+    ],
+    name: "portugues",
+  },
 };
 
 export const LanguageProvider = ({ children }: provider) => {
@@ -47,10 +62,17 @@ export const LanguageProvider = ({ children }: provider) => {
     if (val === "es") {
       setTexts(translations.es);
       setLanguage("es");
+      localStorage.setItem("language", "es");
     }
     if (val === "en") {
       setTexts(translations.en);
       setLanguage("en");
+      localStorage.setItem("language", "en");
+    }
+    if (val === "pr") {
+      setTexts(translations.pr);
+      setLanguage("pr");
+      localStorage.setItem("language", "pr");
     }
   };
 

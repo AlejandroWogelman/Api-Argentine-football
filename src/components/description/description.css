@@ -13,7 +13,8 @@
 }
 .app_description h2 {
   font-size: 2.6rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
 .description__cards article {
@@ -26,7 +27,7 @@
 }
 .description__cards h3 {
   font-size: 2.4rem;
-  color: rgb(240, 193, 54);
+  color: rgba(240, 193, 54, 0.962);
 }
 .description__cards p {
   font-size: 1.8rem;

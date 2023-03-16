@@ -10,7 +10,7 @@ export const Description = () => {
       <div className="description__cards">
         {texts?.description.map(([title, paragraph]) => {
           return (
-            <article>
+            <article key={paragraph}>
               <h3>{title}</h3>
               <p>{paragraph}</p>
             </article>
